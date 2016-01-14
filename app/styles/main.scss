@@ -17,6 +17,85 @@ body {
   padding-bottom: 20px;
 }
 
+
+.btn{ 
+  text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 3px 0;
+    padding: 6px 20px;
+    font-size: 15px;
+    line-height: 20px;
+    height: 34px;
+     
+    color: #ffffff;
+    border: 1px solid #384349;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+      
+    border-radius: 3px;
+    border: 1px solid #0e98d8;
+    box-shadow: 0 1px 7px #888;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    height: auto;
+    line-height: 1.9;
+    min-width: 150px;
+    display: inline-block;
+    padding: 6px 40px;
+    float: none;
+    font-weight: lighter;
+    transition: background linear 0.6s;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+ -webkit-transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+  &.blue{
+
+     
+    background-color: #535f66;
+    color: #ffffff;
+    border: 1px solid #384349; 
+     background: linear-gradient(to bottom, #0e98d8, #268ab8);
+    border-radius: 3px;
+    border: 1px solid #0e98d8;
+     
+    color: #fff;
+     
+    }
+    &.red{ 
+    background: linear-gradient(to bottom, #e90707, #cd0606);
+    border: 1px solid #e90707; 
+     border-radius: 3px;
+     color: #fff;
+    }
+  &.red:hover{
+    background: linear-gradient(to bottom, #ff1b1b, #e90707);
+    box-shadow: 0 1px 20px #888;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 6px 40px;
+      -webkit-transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+  }
+  &.blue:hover{
+         background: linear-gradient(to bottom, #00aeff, #0e98d8);
+    border: 1px solid #00aeff;
+    box-shadow: 0 1px 20px #888;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 6px 40px;
+      -webkit-transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+   
+ 
+  }
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
