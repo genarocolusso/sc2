@@ -1,1 +1,0 @@
-console.log("'Allo 'Allo!");var app=angular.module("starcraft",[]);app.controller("myCtrl",function(a,b){function c(){b.get("https://us.api.battle.net/sc2/profile/"+a.search+"/ladders?locale=en_US&apikey=wn8zvrq35vgfqktdbypr4pfnvcdz9pcd").success(function(b){a.details=b})}var d;a.change=function(){d&&clearTimeout(d),d=setTimeout(c,800)}});

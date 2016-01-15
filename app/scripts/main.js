@@ -15,6 +15,12 @@ app.controller('myCtrl', function($scope, $http) {
         .success(function(response) {
           $scope.details = response; 
                   });
+
+         $http.get("https://us.api.battle.net/sc2/profile/" + $scope.search + "/?locale=en_US&apikey=wn8zvrq35vgfqktdbypr4pfnvcdz9pcd")
+        .success(function(response2) {
+          $scope.jogador = response2;  
+                  });
+
      };
 
 });

@@ -1,13 +1,14 @@
-$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // bower:scss
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
-  color: #000;
+  color: #000; 
   padding: 0.2em 0;
 }
 
@@ -15,8 +16,16 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+      background: #f7f4ef;
+    color: #000;
+    font-size: 14px;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
 }
 
+.portrait{
+     width: 90px;
+    height: 90px;
+}
 
 .btn{ 
   text-align: center;

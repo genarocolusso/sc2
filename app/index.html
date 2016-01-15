@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title>html</title>
+    <title>Starcraft 2 profile</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,19 +30,19 @@
     
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
+        <!-- <ul class="nav nav-pills pull-right">
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-        </ul>
+        </ul> -->
         <h3 class="text-muted">Starcraft2 Profile Stats</h3>
-      </div>
+      </div> 
 
      
                    
 
             <div ng-app="starcraft" ng-controller="myCtrl">
-              <p>Profile: <input type="text" ng-model="search" ng-change="change()"></p>
+              <p>Profile: <input type="text" ng-model="search" ng-change="change()" placeholder="602274/2/Colusso"></p>
               
             <div ng-if="details">   
 
@@ -50,6 +50,11 @@
              <p> Rank:      <span ng-bind="details.currentSeason[0].ladder[0].rank"> </span></p>
              <p> Wins:      <span ng-bind="details.currentSeason[0].ladder[0].wins"> </span></p>
               <p> Losses:     <span ng-bind="details.currentSeason[0].ladder[0].losses"> </span></p>
+ 
+              <hr>
+              <div alt="Description" class="portrait"  ng-style=" {'background-image':'url(' + jogador.portrait.url + ')', 'background-position-x': jogador.portrait.x, 'background-position-y': jogador.portrait.y  }  " ></div>
+
+
              </div>
 
             </div>
