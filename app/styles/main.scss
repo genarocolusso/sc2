@@ -178,46 +178,55 @@ body {
   }
 }
 
-.bolinha{
- width: 57px;
-    height: 31px;
+.bolinha1{
+ width: 36px;
+    height: 23px;
     position: absolute;
     background: url(../images/carrin.png);
-    background-size: 113px 31px;
+    background-size: 72px 23px;
     background-position: left ;
-  margin-left: 90px;
-    -webkit-transition: all 1.5s ease;
-    transition:   all 1.5s ease;
-    animation: play .9s steps(2) infinite;
-   /*  &.primeirasubida{
-      transform: translateY(-165px);
-    }
-    &.segundasubida{
-      margin-left: 531px;
-      margin-top: -165px;
-       transform: translateY(-105px);
-
-    }
-    &.primeiradireita{
-      margin-left: 110px;
-      margin-top: -165px;
-       transform: translateX(421px);
-    }
-    &.segundadireita{
-        margin-left: 531px;
-      margin-top: -270px;
-       transform: translateX(20px);
-
-    } */
-
-   
+  margin-left: 100px;
+    -webkit-transition: margin 4.5s ease;
+    transition:   margin 4.5s ease;
+    animation: playdireita .9s steps(2) infinite;
+    
 
 }
-@keyframes play {
-    100% { background-position: 113px 1px; }
+
+@keyframes playdireita {
+    100% { background-position: 72px 1px; }
+}
+@keyframes playcima {
+    100% { background-position: left 76px; }
 }
 canvas {
     position:absolute;
     top:0;
     left:0
+}
+.bolinha2{
+ width: 18px;
+    height: 38px;
+    position: absolute;
+    background: url(../images/carrin2.png);
+    background-size: 18px 76px;
+    background-position: left 1px;
+  margin-left: 113px;
+    -webkit-transition: margin 4.5s ease;
+    transition:   margin 4.5s ease;
+    animation: playcima .9s steps(2) infinite;
+   
+   
+
+}
+.carrolado{
+ width: 36px;
+    height: 23px;
+    position: absolute;
+    background: url(../images/carrin.png);
+    background-size: 72px 23px;
+    background-position: left ; 
+    animation: playdireita .9s steps(2) infinite;
+    
+
 }

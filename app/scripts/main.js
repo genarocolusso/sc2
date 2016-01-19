@@ -29,17 +29,18 @@ app.controller('myCtrl', function($scope, $http) {
 $("#botaomassa").on('click',function(){
   $(this).attr("id",'animando');
     
-       $('.bolinha').animate({
+       $('.bolinha2').animate({
            marginTop: "-175px" 
-        }).delay(1510)
-              .animate({
+        }).delay(5510)
+              .animate({ 
            marginTop: "-175px",
-           marginLeft: "511px"
-        }).delay(1510)
+           marginLeft: "525px"
+        }, function(){ $('.bolinha2').addClass("carrolado")})
+              .delay(5510).removeClass("carrolado")
            .animate({
            marginTop: "-280px",
-           marginLeft: "511px"
-        });
+           marginLeft: "525px"
+        }, function(){$('.bolinha2').removeClass("carrolado")});
 
        
         
