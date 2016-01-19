@@ -1,7 +1,5 @@
-
-// bower:scss
 $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
-
+// bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
@@ -178,4 +176,48 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+.bolinha{
+ width: 57px;
+    height: 31px;
+    position: absolute;
+    background: url(../images/carrin.png);
+    background-size: 113px 31px;
+    background-position: left ;
+  margin-left: 90px;
+    -webkit-transition: all 1.5s ease;
+    transition:   all 1.5s ease;
+    animation: play .9s steps(2) infinite;
+   /*  &.primeirasubida{
+      transform: translateY(-165px);
+    }
+    &.segundasubida{
+      margin-left: 531px;
+      margin-top: -165px;
+       transform: translateY(-105px);
+
+    }
+    &.primeiradireita{
+      margin-left: 110px;
+      margin-top: -165px;
+       transform: translateX(421px);
+    }
+    &.segundadireita{
+        margin-left: 531px;
+      margin-top: -270px;
+       transform: translateX(20px);
+
+    } */
+
+   
+
+}
+@keyframes play {
+    100% { background-position: 113px 1px; }
+}
+canvas {
+    position:absolute;
+    top:0;
+    left:0
 }
