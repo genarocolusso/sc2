@@ -16,6 +16,9 @@ app.controller('myCtrl', function ($scope, $http) {
         $http.get("https://us.api.battle.net/sc2/profile/" + $scope.search + "/ladders?locale=en_US&apikey=wn8zvrq35vgfqktdbypr4pfnvcdz9pcd").success(function (response) {
             $scope.details = response;
         });
+        $http.get("https://us.api.battle.net/sc2/profile/" + $scope.search + "/matches?locale=en_US&apikey=wn8zvrq35vgfqktdbypr4pfnvcdz9pcd").success(function (response3) {
+            $scope.partidas = response3;
+        });
 
         $http.get("https://us.api.battle.net/sc2/profile/" + $scope.search + "/?locale=en_US&apikey=wn8zvrq35vgfqktdbypr4pfnvcdz9pcd").success(function (response2) {
             $scope.jogador = response2;
@@ -30,12 +33,12 @@ $("#botaomassa").on('click', function () {
         marginTop: "-175px"
     }).delay(5510).animate({
         marginTop: "-175px",
-        marginLeft: "525px"
+        marginLeft: "530px"
     }, function () {
         $('.bolinha2').addClass("carrolado");
     }).delay(5510).removeClass("carrolado").animate({
         marginTop: "-280px",
-        marginLeft: "525px"
+        marginLeft: "535px"
     }, function () {
         $('.bolinha2').removeClass("carrolado");
     });

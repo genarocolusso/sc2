@@ -53,7 +53,40 @@
  
               <hr>
               <div alt="Description" class="portrait"  ng-style=" {'background-image':'url(' + jogador.portrait.url + ')', 'background-position-x': jogador.portrait.x, 'background-position-y': jogador.portrait.y  }  " ></div>
-
+              <hr>
+    
+              <h3> Last Matches - Solo Ladder </h3>
+              <table  class="table table-striped">
+                <thead>
+                 <tr  >
+                  <th>
+                  Mapa  
+                  </th>
+                  <th>
+                  Tipo  
+                  </th>
+                  <th>
+                  Resultado 
+                  </th>
+                  <th>
+                  Data 
+                  </th>
+                 </tr></thead>
+                 <tr ng-repeat="partida in partidas.matches" ng-show='partida.type == "SOLO"'>
+                  <td>
+                  {{partida.map}}  
+                  </td>
+                  <td>
+                  {{partida.type}}  
+                  </td>
+                  <td>
+                  {{partida.decision}}  
+                  </td>
+                  <td>
+                  {{partida.date * 1000 | date:'dd-MM-yyyy HH:mm:ss  ' }}  
+                  </td>
+                 </tr>
+              </table>
 
              </div>
 
