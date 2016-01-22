@@ -37,7 +37,11 @@
    
       <div class="header">
          
+<<<<<<< HEAD
         <h3 class="bigt text-center">Starcraft2 Profile Stats</h3>
+=======
+        <h3 class=" text-center">Starcraft2 Profile Stats</h3>
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
         <h5 class="text-center"> get information about your favorite player </h5>
       </div> 
 
@@ -56,10 +60,14 @@
               </div>
         </section>
         <section class="seconds" ng-if="details">
+<<<<<<< HEAD
              <h3 class="text-center">
               League Information
             </h3>
             <br><br>
+=======
+             
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
               <div class="row infos">
 
                  <div class="col-md-4" ng-if="details">
@@ -94,10 +102,19 @@
             <section class="thirds" ng-show="details">
               <h3 class="text-center"> Last Matches - Solo Ladder </h3>
              
+<<<<<<< HEAD
               <div class="text-center">
               <div class="row" >
                 
                 <div class="col-md-3 mapsinfo" ng-repeat="partida in partidas.matches" ng-show='partida.type == "SOLO"'>
+=======
+              <div class="slidermap text-center">
+              <div class="row" ng-repeat="partida in partidas.matches" ng-show='partida.type == "SOLO"'>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
                    {{partida.map}} <br>
 
                   {{partida.type}}  <br>

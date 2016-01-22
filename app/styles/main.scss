@@ -14,6 +14,24 @@ body {
     font-family: "Open Sans",Helvetica,Arial,sans-serif;
      
      min-width: 410px;
+<<<<<<< HEAD
+=======
+}
+
+section{
+    padding: 50px 0px;
+     &.firsts{
+      background-color: #4B729A;
+     }
+     &.seconds{
+      background-color: #1D1D1D;
+     }
+     &.thirds{
+      background-color:#585858;
+     }
+
+
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
 }
 .bigt{
   color: #fff;
@@ -43,9 +61,12 @@ section{
      }
 
 
+<<<<<<< HEAD
 }
 
 
+=======
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
 
  .container{background: rgba(255,255,255,0.6);
     padding: 40px;}
@@ -145,6 +166,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: Roboto,"Helvetica Neue",Helvetica-,Arial,sans-serif;
     font-weight: 300;
     line-height: 1.45em;
+<<<<<<< HEAD
    
 }
 
@@ -152,6 +174,15 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .profileinput{margin: 0px auto;
     width: 60%;
 
+=======
+    color: #eaeaea;
+}
+
+
+.profileinput{margin: 0px auto;
+    width: 60%;
+
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
       input{
         padding: 10px;
     font-size: 1.4em;
