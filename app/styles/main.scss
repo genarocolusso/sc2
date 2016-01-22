@@ -3,26 +3,49 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000; 
-  padding: 0.2em 0;
-}
+ 
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+   
       background: #f7f4ef;
-    color: #000;
+    color: #fff;
     font-size: 14px;
     font-family: "Open Sans",Helvetica,Arial,sans-serif;
+     
+     min-width: 410px;
 }
 
-.portrait{
-     width: 90px;
+section{
+    padding: 50px 0px;
+     &.firsts{
+      background-color: #4B729A;
+     }
+     &.seconds{
+      background-color: #1D1D1D;
+     }
+     &.thirds{
+      background-color:#585858;
+     }
+
+
+}
+
+
+
+ .container{background: rgba(255,255,255,0.6);
+    padding: 40px;}
+
+ .portraitsquare{ width: 120px;
+  margin: 0px auto;}
+ 
+.portraitimg{
+    width: 90px;
     height: 90px;
+    position: absolute;
+    margin-top: -108px;
+    margin-left: 16px;
+    transform: scale(1.2);
 }
 
 .btn{ 
@@ -103,80 +126,31 @@ body {
  
   }
 }
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+ 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: Roboto,"Helvetica Neue",Helvetica-,Arial,sans-serif;
+    font-weight: 300;
+    line-height: 1.45em;
+    color: #eaeaea;
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
+.profileinput{margin: 0px auto;
+    width: 60%;
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
+      input{
+        padding: 10px;
+    font-size: 1.4em;
+    letter-spacing: 0.08em;
+    margin: 0px auto;
+    width: 100%;
+    text-align: center;
+    color: #585858;
+      }
 
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
   }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
 
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
 
 .bolinha1{
  width: 36px;
@@ -229,4 +203,9 @@ canvas {
     animation: playdireita .9s steps(2) infinite;
     
 
+}
+
+.header{
+    h3{ line-height: 0.9em}
+   h5{ font-size: 16px; margin-bottom: 30px !important;}
 }

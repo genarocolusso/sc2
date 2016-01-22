@@ -6,112 +6,135 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/icon.png">
+    <link rel="apple-touch-icon" href="/icon.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
+
+ 
+    <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     
   </head>
-  <body>
+  <body ng-app="starcraft" ng-controller="myCtrl">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     
-    <div class="container">
+    <section class="firsts">
+   
       <div class="header">
-        <!-- <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul> -->
-        <h3 class="text-muted">Starcraft2 Profile Stats</h3>
+         
+        <h3 class=" text-center">Starcraft2 Profile Stats</h3>
+        <h5 class="text-center"> get information about your favorite player </h5>
       </div> 
 
      
                    
 
-            <div ng-app="starcraft" ng-controller="myCtrl">
-              <p>Profile: <input type="text" ng-model="search" ng-change="change()" placeholder="602274/2/Colusso"></p>
-              
-            <div ng-if="details">   
+           
 
-            <p> League:    <span ng-bind="details.currentSeason[0].ladder[0].league"> </span></p>
+              <div class="profileinput">  <input type="text" ng-model="search" ng-change="change()" placeholder="602274/2/Colusso"> 
+              
+              <br>
+               <div class="btn blue">
+                 <span class="glyphicon glyphicon-pushpin"></span>  Fav This 
+              </div>
+               
+              </div>
+        </section>
+        <section class="seconds" ng-if="details">
+             
+              <div class="row infos">
+
+                 <div class="col-md-4" ng-if="details">
+              <div class="portraitsquare">
+              <img ng-src="../img/{{details.currentSeason[0].ladder[0].league | lowercase}}.png" style="position: relative; z-index: 1; " />
+              <div alt="Description" class="portraitimg"  ng-style=" {'background-image':'url(' + jogador.portrait.url + ')', 'background-position-x': jogador.portrait.x, 'background-position-y': jogador.portrait.y  }  " ></div>
+
+              </div>
+
+              
+              </div>
+
+                <div class="col-md-3" >
+            <p> League:    <span ng-bind="details.currentSeason[0].ladder[0].league | lowercase"> </span></p>
              <p> Rank:      <span ng-bind="details.currentSeason[0].ladder[0].rank"> </span></p>
              <p> Wins:      <span ng-bind="details.currentSeason[0].ladder[0].wins"> </span></p>
               <p> Losses:     <span ng-bind="details.currentSeason[0].ladder[0].losses"> </span></p>
- 
-              <hr>
-              <div alt="Description" class="portrait"  ng-style=" {'background-image':'url(' + jogador.portrait.url + ')', 'background-position-x': jogador.portrait.x, 'background-position-y': jogador.portrait.y  }  " ></div>
-              <hr>
-    
-              <h3> Last Matches - Solo Ladder </h3>
-              <table  class="table table-striped">
-                <thead>
-                 <tr  >
-                  <th>
-                  Mapa  
-                  </th>
-                  <th>
-                  Tipo  
-                  </th>
-                  <th>
-                  Resultado 
-                  </th>
-                  <th>
-                  Data 
-                  </th>
-                 </tr></thead>
-                 <tr ng-repeat="partida in partidas.matches" ng-show='partida.type == "SOLO"'>
-                  <td>
-                  {{partida.map}}  
-                  </td>
-                  <td>
-                  {{partida.type}}  
-                  </td>
-                  <td>
-                  {{partida.decision}}  
-                  </td>
-                  <td>
-                  {{partida.date * 1000 | date:'dd-MM-yyyy HH:mm:ss  ' }}  
-                  </td>
-                 </tr>
-              </table>
-
-             </div>
-
+              
+              
             </div>
- 
-    <div class="btn blue">
-        Click 
-    </div>
-    <div class="btn red">
-        Click 
-    </div>
+             <div class="col-md-5">
+            
+                <p><span class="glyphicon glyphicon-pushpin"></span> </p>
+              
+              
+            </div>
+             
+              </div><!--- row -->
+
+            </section>
+
+            <section class="thirds" ng-show="details">
+              <h3 class="text-center"> Last Matches - Solo Ladder </h3>
+             
+              <div class="slidermap text-center">
+              <div class="row" ng-repeat="partida in partidas.matches" ng-show='partida.type == "SOLO"'>
+                <div class="col-md-6">
+
+                </div>
+                <div class="col-md-6">
+                   {{partida.map}} <br>
+
+                  {{partida.type}}  <br>
+                  {{partida.decision}} <br>
+                  {{partida.date * 1000 | date:'dd-MM-yyyy HH:mm:ss  ' }} 
+                </div>
+
+              </div>
+             </div>
+             
+        
+              
+
+             </section>
+      
+          
        
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from Colusso#1321</p>
+        <p><span class="glyphicon glyphicon-heart"></span> by Colusso#1321</p>
       </div>
-    </div>
+    
     
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-cache/dist/angular-cache.js"></script>
+    <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-    
+     <script type="text/javascript">
+        $(document).ready(function(){
+          $(".slidermap").slick();
+        })
+
+     </script>
     <!-- build:js(.) scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -126,13 +149,13 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-
+    
     <!-- endbuild -->
     
-
+ 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-
+    
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
