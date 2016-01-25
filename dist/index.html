@@ -6,25 +6,13 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="/icon.png">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="shortcut icon" href="/icon.f1b396f0.png">
+    <link rel="apple-touch-icon" href="/icon.f1b396f0.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
-    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="styles/vendor.06e3266d.css">
 
- 
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
+    <script src="scripts/vendor/modernizr.fbe20327.js"></script>
     
   </head>
   <body ng-app="starcraft" ng-controller="myCtrl">
@@ -36,11 +24,12 @@
     <section class="firsts">
    
       <div class="header">
-   
+         
+<<<<<<< HEAD
         <h3 class="bigt text-center">Starcraft2 Profile Stats</h3>
- 
+=======
         <h3 class=" text-center">Starcraft2 Profile Stats</h3>
- 
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
         <h5 class="text-center"> get information about your favorite player </h5>
       </div> 
 
@@ -59,12 +48,14 @@
               </div>
         </section>
         <section class="seconds" ng-if="details">
- 
+<<<<<<< HEAD
              <h3 class="text-center">
               League Information
             </h3>
             <br><br>
- 
+=======
+             
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
               <div class="row infos">
 
                  <div class="col-md-4" ng-if="details">
@@ -98,18 +89,20 @@
 
             <section class="thirds" ng-show="details">
               <h3 class="text-center"> Last Matches - Solo Ladder </h3>
-              
+             
+<<<<<<< HEAD
               <div class="text-center">
               <div class="row" >
                 
-                <div class="col-md-3 mapsinfo" >
- 
+                <div class="col-md-3 mapsinfo" ng-repeat="partida in partidas.matches" ng-show='partida.type == "SOLO"'>
+=======
               <div class="slidermap text-center">
               <div class="row" ng-repeat="partida in partidas.matches" ng-show='partida.type == "SOLO"'>
                 <div class="col-md-6">
 
                 </div>
-                <div class="col-md-6"> 
+                <div class="col-md-6">
+>>>>>>> b384b92a4fa5ab00459f62176c789b59ea7b913d
                    {{partida.map}} <br>
 
                   {{partida.type}}  <br>
@@ -133,14 +126,7 @@
     
     
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-cache/dist/angular-cache.js"></script>
-    <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+    <script src="scripts/vendor.4caf3b1c.js"></script>
 
      <script type="text/javascript">
         $(document).ready(function(){
@@ -148,28 +134,10 @@
         })
 
      </script>
-    <!-- build:js(.) scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    
-    <!-- endbuild -->
+    <script src="scripts/plugins.bde8e777.js"></script>
     
  
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    
-    <!-- endbuild -->
+    <script src="scripts/main.45f3e350.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
