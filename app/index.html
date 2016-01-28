@@ -1,65 +1,70 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <title>Starcraft 2 profile</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <title>Starcraft 2 profile</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" href="/icon.png">
-    <link rel="apple-touch-icon" href="/icon.png">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="/icon.png">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
-    <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    
-    <!-- endbuild -->
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
 
- 
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    
-  </head>
-  <body ng-app="starcraft" ng-controller="myCtrl">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+
+
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+
+</head>
+<body ng-app="starcraft" ng-controller="myCtrl">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+      <![endif]-->
 
-    
-    <section class="firsts">
-   
-      <div class="header">
-         
-        <h3 class=" text-center">Starcraft2 Profile Stats</h3>
-        <h5 class="text-center"> get information about your favorite player </h5>
-      </div> 
 
-     
-                   
+      <section class="firsts pad90">
 
-           
+        <div class="header">
 
-              <div class="profileinput">  <input type="text" ng-model="search" ng-change="change()" placeholder="602274/2/Colusso"> 
-              
-              <br>
-               <div class="btn blue">
-                 <span class="glyphicon glyphicon-pushpin"></span>  Fav This 
-              </div>
-               
-              </div>
-        </section>
-        <section class="seconds" ng-if="details">
-             
-              <div class="row infos">
+          <h1 class=" text-center">Starcraft2 Profile Stats</h1>
+          <p class="text-center"> get information about your favorite player </p>
 
-                 <div class="col-md-4" ng-if="details">
+
+
+
+
+
+
+
+          <div class="profileinput">  <input type="text" ng-model="search" ng-change="change()" placeholder="602274/2/Colusso"> 
+
+
+          </div>
+
+        </div> 
+      </section>
+
+      <section class="seconds"  >
+        <div class="container">
+
+          <!-- <div class="btn blue">
+           <span class="glyphicon glyphicon-pushpin"></span>  Fav This 
+         </div> -->
+         <br><br>
+         <div class="row">
+
+               <!--  <div class="col-md-4" ng-if="details">
               <div class="portraitsquare">
               <img ng-src="../img/{{details.currentSeason[0].ladder[0].league | lowercase}}.png" style="position: relative; z-index: 1; " />
               <div alt="Description" class="portraitimg"  ng-style=" {'background-image':'url(' + jogador.portrait.url + ')', 'background-position-x': jogador.portrait.x, 'background-position-y': jogador.portrait.y  }  " ></div>
@@ -67,105 +72,101 @@
               </div>
 
               
+            </div> -->
+            <div class="col-sm-12  ">
+              <h1> All you need for starcraft </h1>
+              <p>
+                Trust fund williamsburg street art hella. Offal forage banh mi twee readymade letterpress, mlkshk ennui brooklyn squid you probably haven't heard of them vice YOLO polaroid.  </p>
+                <br>
+                <a class="btn blue"> LEARN MORE </a>
               </div>
 
-                <div class="col-md-3" >
-            <p> League:    <span ng-bind="details.currentSeason[0].ladder[0].league | lowercase"> </span></p>
-             <p> Rank:      <span ng-bind="details.currentSeason[0].ladder[0].rank"> </span></p>
-             <p> Wins:      <span ng-bind="details.currentSeason[0].ladder[0].wins"> </span></p>
-              <p> Losses:     <span ng-bind="details.currentSeason[0].ladder[0].losses"> </span></p>
-              
-              
-            </div>
-             <div class="col-md-5">
-            
-                <p><span class="glyphicon glyphicon-pushpin"></span> </p>
-              
-              
-            </div>
-             
-              </div><!--- row -->
 
-            </section>
 
-            <section class="thirds" ng-show="details">
-              <h3 class="text-center"> Last Matches - Solo Ladder </h3>
-             
-              <div class="slidermap text-center">
-              <div class="row" ng-repeat="partida in partidas.matches" ng-show='partida.type == "SOLO"'>
-                <div class="col-md-6">
 
-                </div>
-                <div class="col-md-6">
-                   {{partida.map}} <br>
+            </div><!--- row -->
 
-                  {{partida.type}}  <br>
-                  {{partida.decision}} <br>
-                  {{partida.date * 1000 | date:'dd-MM-yyyy HH:mm:ss  ' }} 
-                </div>
+            <br><br> <hr class="  gradient">
+          </div>
+        </section>
 
+        <section class="thirds" >
+          <h1 class="text-center"> Last Matches - Solo Ladder Results </h1>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="img/zerg.png" class="img-responsive raceicons">
               </div>
-             </div>
-             
-        
-              
+              <div class="col-sm-4">
+                <img src="img/protoss.png" class="img-responsive raceicons">
+              </div>
+              <div class="col-sm-4">
+                <img src="img/terran.png" class="img-responsive raceicons">
+              </div>
+            </div>
+          </div>
 
-             </section>
-      
-          
-       
-      <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> by Colusso#1321</p>
-      </div>
-    
-    
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/angular/angular.js"></script>
-    <script src="/bower_components/angular-cache/dist/angular-cache.js"></script>
-    <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
 
-     <script type="text/javascript">
+
+
+        </section>
+
+
+
+        <div class="footer">
+
+        </div>
+
+
+
+        <!-- build:js(.) scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-cache/dist/angular-cache.js"></script>
+        <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <script type="text/javascript">
         $(document).ready(function(){
           $(".slidermap").slick();
         })
 
-     </script>
-    <!-- build:js(.) scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    
-    <!-- endbuild -->
-    
- 
-    <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
-    
-    <!-- endbuild -->
+        </script>
+        <!-- build:js(.) scripts/plugins.js -->
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+        <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-  </body>
-</html>
+        <!-- endbuild -->
+
+
+        <!-- build:js scripts/main.js -->
+        <script src="scripts/main.js"></script>
+
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+      </body>
+      </html>
