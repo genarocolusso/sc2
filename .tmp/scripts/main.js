@@ -4,12 +4,19 @@ console.log('\'Allo \'Allo!'); // eslint-disable-line no-console
 var app = angular.module('starcraft', ['angular-cache']);
 app.controller('myCtrl', function ($scope, $http) {
     var pendingTask;
+    $http.get("https://us.api.battle.net/sc2/profile/602274/2/Colusso/ladders?locale=en_US&apikey=wn8zvrq35vgfqktdbypr4pfnvcdz9pcd", { cache: true }).success(function (response) {
+        $scope.details = response;
+    });
+    $http.get("https://us.api.battle.net/sc2/profile/602274/2/Colusso/?locale=en_US&apikey=wn8zvrq35vgfqktdbypr4pfnvcdz9pcd", { cache: true }).success(function (response2) {
+        $scope.jogador = response2;
+    });
+
     // https://us.api.battle.net/sc2/profile/602274/2/Colusso/ladders?locale=en_US&apikey=wn8zvrq35vgfqktdbypr4pfnvcdz9pcd
     $scope.change = function () {
         if (pendingTask) {
             clearTimeout(pendingTask);
         }
-        pendingTask = setTimeout(fetch, 800);
+        pendingTask = setTimeout(fetch, 20);
     };
 
     function fetch() {

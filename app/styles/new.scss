@@ -1,0 +1,53 @@
+
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.lateral-menu {
+	width: 280px;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-weight: 400;
+	min-height: 620px;
+	margin-top: 10px;
+	position: fixed;
+	ul { li{
+
+		margin: 10px 0;
+		text-align: center;
+		/* border-bottom: 1px solid; */
+		&:hover{
+			font-weight: 800;
+		}
+	}
+}
+}
+
+ul, ol {
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-decoration: none;
+	list-style-image: none;
+	list-style-type: none;
+	padding: 0px;
+}
+
+.bolas-lado {
+    height: 100%; 
+    		.item{
+    			width:  80px; height: 80px;
+    			border-radius: 50%;
+    			background-color: #888;
+    			margin-top: 90px;
+    			margin: 90px auto 0px auto;
+    			transition: all 0.2s ease-in;
+    			&:hover{
+    				transform: scale(1.1);
+
+    			}
+    		}
+    		  
+    		 
+    		 
+} 
