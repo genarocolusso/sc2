@@ -38,7 +38,7 @@ app.controller('myCtrl', function($scope, $http) {
         console.log(data.ladder[0].matchMakingQueue);
         if(data.ladder[0].matchMakingQueue == "LOTV_SOLO"){
           $scope.ligaAtual = data.ladder[0];
-          console.log("we did it reddit");
+          console.log("we did it reddit".ligaAtual.league);
         }
       });
     });

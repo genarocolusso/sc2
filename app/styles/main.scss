@@ -3,106 +3,107 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
- @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
- @import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
 /* Space out content a bit */
 
-  .z-1 {
+.z-1 {
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
 }
 
-  .z-2 {
+.z-2 {
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
 }
 
-  .z-3 {
+.z-3 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
 }
-  .z-4 {
+.z-4 {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
 }
 
- .z-5 {
+.z-5 {
   box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
 }
 
 
 body {
-   
-    background: #FFF;
-    font-weight: 300;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    color: #000;
+
+  background: #FFF;
+  font-weight: 300;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #000;
     //font-family: 'Indie Flower', cursive;
     font-family: 'Poiret One', cursive;
-}
-*{
-  transition-timing-function: cubic-bezier(0.41, 0, 0.18, 1); 
-}
+  }
+  *{
+    transition-timing-function: cubic-bezier(0.41, 0, 0.18, 1); 
+  }
   .prof{
-      font-weight: bold;
+    font-weight: bold;
     display: block;
     line-height: 16px;
     color: #00C0FF;
-}
- .pad90{padding: 90px 0px;}
-section{
-    
-     &.firsts{
-      color: #fff;
-      background: url("https://cdn0.vox-cdn.com/uploads/chorus_asset/file/3517220/StarCraft_II_LotV_GDC_CB_Preview_All_New_CB_Units.0.jpg");
-      background-size:cover;
-      background-position:center 0px;
-      box-shadow: 0px 1px 23px rgba(0,0,0,0.33);
-      position: relative;
-        h1{ font-size: 60px; text-transform: uppercase;color: #fff;} 
-        p{color: #fff;} 
-          &::before{
-          background-color: rgba(35, 34, 35, 0.78) ;
-          content: '';
-          display: block;
-          height: 100%;
-          position: absolute;
-          width: 100%;
-          margin-top: -90px;
-        }
-     }
-     &.seconds{
-      text-align: center;
-        h1{ color: #3A3A3A;}  
-        p{ color: #5F5F5F;
-    letter-spacing: 2px;
-    font-size: 18px;
-}
-     }
-     &.thirds{
-       
-     }
+  }
+  .pad90{padding: 90px 0px;}
+  section{
+
+   &.firsts{
+    color: #fff;
+    background: url("https://cdn0.vox-cdn.com/uploads/chorus_asset/file/3517220/StarCraft_II_LotV_GDC_CB_Preview_All_New_CB_Units.0.jpg");
+    background-size:cover;
+    background-position:center 0px;
+    box-shadow: 0px 1px 23px rgba(0,0,0,0.33);
+    position: relative;
+    h1{ font-size: 60px; text-transform: uppercase;color: #fff;} 
+    p{color: #fff;} 
+    &::before{
+      background-color: rgba(35, 34, 35, 0.78) ;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      margin-top: -90px;
+    }
+  }
+  &.seconds{
+    text-align: center;
+    h1{ color: #3A3A3A;}  
+    p{ color: #5F5F5F;
+      letter-spacing: 2px;
+      font-size: 18px;
+    }
+  }
+  &.thirds{
+
+  }
 
 
 }
 
 
 .raceicons{ max-height:200px; margin: 0px auto; padding:20px;}
- .container{background: rgba(255,255,255,0.6);
-    padding: 40px;}
+.container{background: rgba(255,255,255,0.6);
+  padding: 40px;}
 
- .portraitsquare{ width: 120px;
-  margin: 0px auto;}
- 
-.portraitimg{
-    width: 90px;
+  .portraitsquare{ width: 120px;
+    margin: 30px auto;}
+
+    .portraitimg{
+        width: 90px;
     height: 90px;
     position: absolute;
-    margin-top: -108px;
-    margin-left: 16px;
-    transform: scale(1.2);
-}
+    margin-top: -103px;
+    margin-left: 12px;
+    /* -webkit-transform: scale(1.2); */
+    /* transform: scale(1.2); */
+   }
 
-.btn{ 
-  text-align: center;
+   .btn{ 
+    text-align: center;
     vertical-align: middle;
     cursor: pointer;
     -moz-box-sizing: border-box;
@@ -112,12 +113,12 @@ section{
     font-size: 16px;
     line-height: 20px;
     height: 34px;
-     
+
     color: #ffffff;
     border: 1px solid #384349;
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
     border-radius: 2px;
-      
+
     border-radius: 3px;
     border: 1px solid #0e98d8;
     box-shadow: 0 1px 7px #888;
@@ -136,144 +137,145 @@ section{
     -webkit-user-select: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-tap-highlight-color: transparent;
- -webkit-transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    -webkit-transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
     transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-  &.blue{
+    &.blue{
 
-     
-    background-color: #535f66;
-    color: #ffffff;
-    border: 1px solid #384349; 
-     background: linear-gradient(to bottom, #0e98d8, #268ab8);
-    border-radius: 3px;
-    border: 1px solid #0e98d8;
-     
-    color: #fff;
-     
+
+      background-color: #535f66;
+      color: #ffffff;
+      border: 1px solid #384349; 
+      background: linear-gradient(to bottom, #0e98d8, #268ab8);
+      border-radius: 3px;
+      border: 1px solid #0e98d8;
+
+      color: #fff;
+
     }
     &.red{ 
-    background: linear-gradient(to bottom, #e90707, #cd0606);
-    border: 1px solid #e90707; 
-     border-radius: 3px;
-     color: #fff;
+      background: linear-gradient(to bottom, #e90707, #cd0606);
+      border: 1px solid #e90707; 
+      border-radius: 3px;
+      color: #fff;
     }
-  &.red:hover{
-    background: linear-gradient(to bottom, #ff1b1b, #e90707);
-    box-shadow: 0 1px 20px #888;
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
-    color: white;
-    padding: 6px 40px;
+    &.red:hover{
+      background: linear-gradient(to bottom, #ff1b1b, #e90707);
+      box-shadow: 0 1px 20px #888;
+      box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
+      color: white;
+      padding: 6px 40px;
       -webkit-transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-  }
-  &.blue:hover{
-         background: linear-gradient(to bottom, #00aeff, #0e98d8);
-    border: 1px solid #00aeff;
-    box-shadow: 0 1px 20px #888;
-    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
-    color: white;
-    padding: 6px 40px;
-      -webkit-transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-    transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
-   
+      transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+    }
+    &.blue:hover{
+     background: linear-gradient(to bottom, #00aeff, #0e98d8);
+     border: 1px solid #00aeff;
+     box-shadow: 0 1px 20px #888;
+     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.4);
+     color: white;
+     padding: 6px 40px;
+     -webkit-transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+     transition:   box-shadow 0.2s, background-color 0.2s, border-color 0.2s, color 0.2s;
+
+
+   }
+ }
  
-  }
-}
- 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-     
-    font-weight: 300;
-    line-height: 1.45em;
-    color: #3A3A3A;
+ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+
+  font-weight: 300;
+  line-height: 1.45em;
+  color: #3A3A3A;
 }
 
 
 .profileinput{margin: 0px auto;
-    width: 60%;
+  width: 60%;
 
-      input{
-        padding: 10px;
+  input{
+    padding: 10px;
     font-size: 1.4em;
     letter-spacing: 0.08em;
     margin: 0px auto;
     width: 100%;
     text-align: center;
     color: #585858;
-      }
-
   }
+
+}
 
 
 
 .bolinha1{
  width: 36px;
-    height: 23px;
-    position: absolute;
-    background: url(../images/carrin.png);
-    background-size: 72px 23px;
-    background-position: left ;
-  margin-left: 100px;
-    -webkit-transition: margin 4.5s ease;
-    transition:   margin 4.5s ease;
-    animation: playdireita .9s steps(2) infinite;
-    
+ height: 23px;
+ position: absolute;
+ background: url(../images/carrin.png);
+ background-size: 72px 23px;
+ background-position: left ;
+ margin-left: 100px;
+ -webkit-transition: margin 4.5s ease;
+ transition:   margin 4.5s ease;
+ animation: playdireita .9s steps(2) infinite;
+
 
 }
 
 @keyframes playdireita {
-    100% { background-position: 72px 1px; }
+  100% { background-position: 72px 1px; }
 }
 @keyframes playcima {
-    100% { background-position: left 76px; }
+  100% { background-position: left 76px; }
 }
 canvas {
-    position:absolute;
-    top:0;
-    left:0
+  position:absolute;
+  top:0;
+  left:0
 }
 .bolinha2{
  width: 18px;
-    height: 38px;
-    position: absolute;
-    background: url(../images/carrin2.png);
-    background-size: 18px 76px;
-    background-position: left 1px;
-  margin-left: 113px;
-    -webkit-transition: margin 4.5s ease;
-    transition:   margin 4.5s ease;
-    animation: playcima .9s steps(2) infinite;
-   
-   
+ height: 38px;
+ position: absolute;
+ background: url(../images/carrin2.png);
+ background-size: 18px 76px;
+ background-position: left 1px;
+ margin-left: 113px;
+ -webkit-transition: margin 4.5s ease;
+ transition:   margin 4.5s ease;
+ animation: playcima .9s steps(2) infinite;
+
+
 
 }
 .carrolado{
  width: 36px;
-    height: 23px;
-    position: absolute;
-    background: url(../images/carrin.png);
-    background-size: 72px 23px;
-    background-position: left ; 
-    animation: playdireita .9s steps(2) infinite;
-    
+ height: 23px;
+ position: absolute;
+ background: url(../images/carrin.png);
+ background-size: 72px 23px;
+ background-position: left ; 
+ animation: playdireita .9s steps(2) infinite;
+
 
 }
 
- 
+
 hr.gradient {
-    border: none;
-    min-height: 20px;
-    margin: 1px 0;
-    position: relative;
-    background: radial-gradient(ellipse farthest-side at top center, rgba(0, 0, 0, 0.08), transparent) top center no-repeat;
-    background-size: 100% 20px;
+  border: none;
+  min-height: 20px;
+  margin: 1px 0;
+  position: relative;
+  background: radial-gradient(ellipse farthest-side at top center, rgba(0, 0, 0, 0.08), transparent) top center no-repeat;
+  background-size: 100% 20px;
 }
 .header{ z-index: 1;
-    position: relative;}
+  position: relative;}
 
-    .footer{
-      background-color: rgba(0,0,0,0.85);
-    }
-    .cardbox{ 
+  .footer{
+    background-color: rgba(0,0,0,0.85);
+        min-height: 500px;
+  }
+  .cardbox{ 
     position: absolute;
     width: 80%;
     padding: 40px;
@@ -281,4 +283,4 @@ hr.gradient {
     border-radius: 10px;
     left: 10%;
     margin-top: -200px;
-    }
+  }

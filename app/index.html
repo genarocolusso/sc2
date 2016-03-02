@@ -114,14 +114,25 @@
             <div class="row">
               <div class="col-sm-3">
                 <div class="portraitsquare">
-                  <img ng-src="../img/{{ligaAtual.league | lowercase}}.png" style="position: relative; z-index: 1; " />
+                  <img ng-src="../img/{{ligaAtual.league | lowercase}}.png" style="position: relative; z-index: 1;    width: 115px;" />
                   <div alt="Description" class="portraitimg"  ng-style=" {'background-image':'url(' + jogador.portrait.url + ')', 'background-position-x': jogador.portrait.x, 'background-position-y': jogador.portrait.y  }  " ></div>
                 </div>
               </div>
               <div class="col-sm-9">
-                <h2 style=" color: #1494CF;
+                
+                <div class="pull-left">
+                  <h2 style=" color: #1494CF;
                 letter-spacing: 2px;">{{jogador.displayName}}</h2>
-                <h5 ng-if="details" >Clan name -  {{details.currentSeason[0].characters[0].clanName}}</h5>
+                <h5 ng-if="details && jogador.clanName" >Clan name -  {{jogador.clanName}}</h5>
+                <p ng-repeat="(key, value) in jogador.career" style=" color: #3A3A3A;"> <b>{{key}}</b> - {{value}} </p>
+                 
+              </div>
+              <div class="pull-left">
+                <div style="padding: 70px 30px 0px 30px">
+                <p ng-repeat="(key, value) in ligaAtual" style=" color: #3A3A3A;"> <b>{{key}}</b> - {{value}} </p>
+                  </div>
+    
+              </div>
               </div>
  
             </div>
