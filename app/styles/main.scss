@@ -3,9 +3,30 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
- 
-
+ @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+ @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 /* Space out content a bit */
+
+  .z-1 {
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+}
+
+  .z-2 {
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+}
+
+  .z-3 {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.23), 0 10px 40px rgba(0, 0, 0, 0.19);
+}
+  .z-4 {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+}
+
+ .z-5 {
+  box-shadow: 0 15px 24px rgba(0, 0, 0, 0.22), 0 19px 76px rgba(0, 0, 0, 0.3);
+}
+
+
 body {
    
     background: #FFF;
@@ -14,6 +35,17 @@ body {
     margin: 0;
     padding: 0;
     color: #000;
+    //font-family: 'Indie Flower', cursive;
+    font-family: 'Poiret One', cursive;
+}
+*{
+  transition-timing-function: cubic-bezier(0.41, 0, 0.18, 1); 
+}
+  .prof{
+      font-weight: bold;
+    display: block;
+    line-height: 16px;
+    color: #00C0FF;
 }
  .pad90{padding: 90px 0px;}
 section{
@@ -22,6 +54,7 @@ section{
       color: #fff;
       background: url("https://cdn0.vox-cdn.com/uploads/chorus_asset/file/3517220/StarCraft_II_LotV_GDC_CB_Preview_All_New_CB_Units.0.jpg");
       background-size:cover;
+      background-position:center 0px;
       box-shadow: 0px 1px 23px rgba(0,0,0,0.33);
       position: relative;
         h1{ font-size: 60px; text-transform: uppercase;color: #fff;} 
@@ -45,7 +78,7 @@ section{
 }
      }
      &.thirds{
-      
+       
      }
 
 
@@ -148,7 +181,7 @@ section{
 }
  
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: Roboto,"Helvetica Neue",Helvetica-,Arial,sans-serif;
+     
     font-weight: 300;
     line-height: 1.45em;
     color: #3A3A3A;
@@ -236,3 +269,16 @@ hr.gradient {
 }
 .header{ z-index: 1;
     position: relative;}
+
+    .footer{
+      background-color: rgba(0,0,0,0.85);
+    }
+    .cardbox{ 
+    position: absolute;
+    width: 80%;
+    padding: 40px;
+    background-color: rgba(255,255,255,1);
+    border-radius: 10px;
+    left: 10%;
+    margin-top: -200px;
+    }

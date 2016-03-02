@@ -23,6 +23,19 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 	}
 }
 }
+.lateral-menu ul li{
+	 
+	 
+
+		margin: 10px 0;
+		text-align: center;
+		/* border-bottom: 1px solid; */
+	 
+}
+.lateral-menu ul li:hover{
+			font-weight: 800;
+		} 
+  
 
 ul, ol {
 	margin-top: 0;
@@ -35,19 +48,23 @@ ul, ol {
 
 .bolas-lado {
     height: 100%; 
-    		.item{
+    		
+    	 	 
+    		 
+} 
+.bolas-lado .item{
     			width:  80px; height: 80px;
     			border-radius: 50%;
     			background-color: #888;
     			margin-top: 90px;
     			margin: 90px auto 0px auto;
     			transition: all 0.2s ease-in;
-    			&:hover{
+    			
+    		}
+
+    		.bolas-lado .item:hover{
+    			 
     				transform: scale(1.1);
 
-    			}
+    			 
     		}
-    		  
-    		 
-    		 
-} 
