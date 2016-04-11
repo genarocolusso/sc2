@@ -12,8 +12,7 @@
 
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
-  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
-  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick-theme.css" />
+   
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
@@ -22,7 +21,7 @@
   <!-- build:js scripts/vendor/modernizr.js -->
   <script src="/bower_components/modernizr/modernizr.js"></script>
 
-
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
@@ -59,23 +58,15 @@
          <br><br>
          <div class="row">
 
-               <!--  <div class="col-md-4" ng-if="details">
-              <div class="portraitsquare">
-              <img ng-src="../img/{{details.currentSeason[0].ladder[0].league | lowercase}}.png" style="position: relative; z-index: 1; " />
-              <div alt="Description" class="portraitimg"  ng-style=" {'background-image':'url(' + jogador.portrait.url + ')', 'background-position-x': jogador.portrait.x, 'background-position-y': jogador.portrait.y  }  " ></div>
-
-              </div>
-
-              
-            </div> -->
+            
             <div class="col-sm-12  ">
               <h1> All you need for starcraft </h1>
               <p>
-                Trust fund williamsburg street art hella. Offal forage banh mi twee readymade letterpress, mlkshk ennui brooklyn squid you probably haven't heard of them vice YOLO polaroid.  </p>
+               Under development project to get information about starcraft profiles and leagues  </p>
+               <p> Created By <a href="http://www.twitter.com.br/genarocolusso" target="_blank">@genarocolusso</a> for a personal angularJS study. feel free to check out this project on <a href="https://github.com/genarocolusso/sc2"> <i class="fa fa-github"></i> github </a> and for it as well</p>
                 <br>
-                <a class="btn blue"> CONTACT </a>
+                <a class="btn blue" href="http://www.twitter.com.br/genarocolusso" target="_blank"> CONTACT </a>
               </div>
-
  
 
             </div><!--- row -->
@@ -100,21 +91,16 @@
               </div>
             </div>
           </div>
-
-
-
-
-
+  
         </section>
-
-
-
+  
         <div class="footer pad90">
           <div class="cardbox z-3">
             <div class="row">
               <div class="col-sm-3">
                 <div class="portraitsquare">
-                  <img ng-src="../img/{{ligaAtual.league | lowercase}}.png" style="position: relative; z-index: 1;    width: 115px;" />
+                  <img ng-src="../img/{{ligaAtual.league | lowercase}}.png" style="position: relative; z-index: 1;    width: 115px;"  ng-show="ligaAtual.league != null"/>
+                  <img ng-src="../img/unranked.png" style="position: relative; z-index: 1;    width: 115px;"  ng-show="ligaAtual.league == null"/>
                   <div alt="Description" class="portraitimg"  ng-style=" {'background-image':'url(' + jogador.portrait.url + ')', 'background-position-x': jogador.portrait.x, 'background-position-y': jogador.portrait.y  }  " ></div>
                 </div>
               </div>
@@ -145,19 +131,11 @@
 
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
-        <script src="/bower_components/jquery/dist/jquery.js"></script>
-        <script src="/bower_components/angular/angular.js"></script>
-        <script src="/bower_components/angular-cache/dist/angular-cache.js"></script>
-        <script src="/bower_components/slick-carousel/slick/slick.min.js"></script>
-        <!-- endbower -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>  
+         <!-- endbower -->
         <!-- endbuild -->
 
-        <script type="text/javascript">
-        $(document).ready(function(){
-          $(".slidermap").slick();
-        })
-
-        </script>
+     
         <!-- build:js(.) scripts/plugins.js -->
         <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
         <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -171,7 +149,7 @@
         <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
         <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
         <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
 
         <!-- endbuild -->
 
@@ -182,13 +160,6 @@
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='https://www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+         
       </body>
       </html>

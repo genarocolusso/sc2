@@ -1,11 +1,9 @@
 {
-  "name": "html",
+  "name": "sc2",
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
-    "modernizr": "~2.8.3",
-    "angular-cache": "~4.4.3",
-    "slick-carousel": "~1.5.9"
+    "modernizr": "~2.8.1"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -17,7 +15,7 @@
     }
   },
   "devDependencies": {
-    "chai": "~3.4.2",
-    "mocha": "~2.3.4"
+    "chai": "~3.5.0",
+    "mocha": "~2.4.5"
   }
 }
